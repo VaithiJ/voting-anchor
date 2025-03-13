@@ -29,6 +29,8 @@ Challenges Faced
     - Faced errors when calling the raydium cpi call, so a mocking mechanism was implemented using the #[cfg(feature = "test")] flag. During testing, the Raydium CPI call is replaced with a mock log (msg!("Mocking Raydium CPI call");).
 2. **Account Management** :
     - Managing multiple associated token accounts (e.g., voter_token_account, user_coin_token_account) and ensuring they are correctly initialized required careful planning.
+3. **Reward Mechanism** :
+    - Since the Raydium cpi call was mocked, instead of endvote, the rewards were sent during casting a vote to make sure it works .  
 3. **Testing Limitations** :
     - Testing the full functionality of the program required workarounds like mocking external dependencies (e.g., Raydium).  
 
