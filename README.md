@@ -26,8 +26,7 @@ During the project development, the following challenges were encountered:
 
 Challenges Faced
 1. **Raydium CPI Testing** :
-    - The Raydium program is not available on Devnet or Localnet, making it impossible to test the Cross-Program Invocation (CPI) call directly.
-    - To work around this, a mocking mechanism was implemented using the #[cfg(feature = "test")] flag. During testing, the Raydium CPI call is replaced with a mock log (msg!("Mocking Raydium CPI call");).
+    - Faced errors when called the rayidum cpi call, so a mocking mechanism was implemented using the #[cfg(feature = "test")] flag. During testing, the Raydium CPI call is replaced with a mock log (msg!("Mocking Raydium CPI call");).
 2. **Account Management** :
     - Managing multiple associated token accounts (e.g., voter_token_account, user_coin_token_account) and ensuring they are correctly initialized required careful planning.
 3. **Testing Limitations** :
